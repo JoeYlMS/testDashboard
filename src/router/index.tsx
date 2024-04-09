@@ -1,7 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Layout } from '../pages';
+import { Layout, Home } from '../pages';
 import { routers } from '../constants/routers';
-import { Home } from '../components';
 
 export const router = createBrowserRouter([
   { path: routers.home, element: <Home /> },
@@ -11,7 +10,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <h3>Dashboard</h3>,
+        element: <h2>Dashboard</h2>,
       },
       {
         path: routers.adminPanel.product,

@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom';
+import { Navigation } from '../../components';
 
 export const Layout = () => {
   return (
     <>
-      <header>Header</header>
+      <Navigation />
       <Outlet />
       <footer>Footer</footer>
     </>

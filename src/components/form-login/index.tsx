@@ -1,31 +1,45 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, FormEventHandler, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { InputText } from './input-text';
+import './style.scss';
+import { routers } from '../../constants/routers';
 
 export const FormLogin = () => {
   const [initialValue, setInitialValue] = useState({
-    name: '',
+    login: '',
     password: '',
   });
-  const handelChange = (event: ChangeEvent<HTMLInputElement>) => {
+
+  const navigation = useNavigate();
+
+  const handelChange = (event: ChangeEvent<HTMLInputElement>): void => {
     event.preventDefault();
-    console.log(event.target.value);
+    const { name, value } = event.target;
+    setInitialValue((state) => ({
+      ...state,
+      [name]: value,
+    }));
+  };
+
+  const handleFormSubmit: FormEventHandler<HTMLFormElement> = (event) => {
+    event.preventDefault();
+    console.log(initialValue);
+    navigation(routers.admin);
   };
 
   return (
-    <form className=''>
+    <form className='form-sing-in' onSubmit={handleFormSubmit}>
+      <h2>Sing-in</h2>
+      <InputText type='text' name='login' placeholder='your Login' handelChange={handelChange} />
+
       <InputText
-        name='login'
-        type='text'
+        name='password'
+        type='password'
         handelChange={handelChange}
-        placeholder='your First Name'
+        placeholder='your password'
       />
 
-      <label id='login'>
-        <input type='text' id='login' onChange={handelChange} placeholder='your First Name' />
-      </label>
-      <label id='password'>
-        <input type='password' id='password' placeholder='your Password' />
-      </label>
       <button type='submit'>Sing-In</button>
     </form>
   );

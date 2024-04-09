@@ -3,14 +3,28 @@ import { ChangeEvent, FC } from 'react';
 interface IInputTextProps {
   name: string;
   type: string;
-  handelChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
   placeholder: string;
+  handelChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const InputText: FC<IInputTextProps> = ({ name, type, handelChange, placeholder }) => {
+export const InputText: FC<IInputTextProps> = ({
+  name,
+  type,
+  handelChange,
+  placeholder,
+  className,
+}) => {
   return (
     <label title={name}>
-      <input type={type} name={name} onChange={handelChange} placeholder={placeholder} />
+      <span>{placeholder}</span>
+      <input
+        type={type}
+        name={name}
+        onChange={handelChange}
+        className={className}
+        placeholder={placeholder}
+      />
     </label>
   );
 };
