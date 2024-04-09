@@ -1,0 +1,44 @@
+.form-sing-in {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  margin: auto;
+  padding: 24px 16px;
+  max-width: 600px;
+  width: calc(100% - 32px);
+  filter: drop-shadow(0 10px 60px #e2ecf9);
+  background-color: #ffffff;
+  border-radius: 16px;
+
+  h2 {
+    text-align: center;
+  }
+
+  label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    span {
+      padding-left: 12px;
+    }
+    input {
+      outline: none;
+      border: 1px solid #e2ecf9;
+      border-radius: 6px;
+      width: calc(100% - 24px);
+      padding: 8px 12px;
+      &:focus {
+        filter: drop-shadow(0 5px 24px #e2ecf9);
+        background-color: #e2ecf967;
+      }
+    }
+  }
+
+  button {
+    padding: 8px 48px;
+    border-radius: 6px;
+    display: block;
+    margin: auto;
+  }
+}
