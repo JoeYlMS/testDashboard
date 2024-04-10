@@ -3,10 +3,9 @@ import { Navigation } from '../../components';
 
 export const Layout = () => {
   return (
-    <>
+    <section className='dashboard-content'>
       <Navigation />
       <Outlet />
-      <footer>Footer</footer>
-    </>
+    </section>
   );
 };

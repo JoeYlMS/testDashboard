@@ -1,3 +1,3 @@
-export const Promote = ({}) => {
+export const Promote = () => {
   return <>Promote</>;
 };

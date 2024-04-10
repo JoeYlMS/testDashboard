@@ -11,7 +11,7 @@ interface INavListProps {
 
 export const NavList: React.FC<INavListProps> = ({ name, path, Svg, setIsActiveList }) => {
   return (
-    <li>
+    <li className='naw-list'>
       <Link to={path} className='list-item'>
         <Svg />
         <p>{name}</p>

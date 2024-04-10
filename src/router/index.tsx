@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Layout, Home } from '../pages';
+import { Layout, Home, Customers, Product, Income, Promote, Help } from '../pages';
 import { routers } from '../constants/routers';
 
 export const router = createBrowserRouter([
@@ -14,23 +14,23 @@ export const router = createBrowserRouter([
       },
       {
         path: routers.adminPanel.product,
-        element: <h3>product</h3>,
+        element: <Product />,
       },
       {
         path: routers.adminPanel.customers,
-        element: <h3>customers</h3>,
+        element: <Customers />,
       },
       {
         path: routers.adminPanel.income,
-        element: <h3>income</h3>,
+        element: <Income />,
       },
       {
         path: routers.adminPanel.promote,
-        element: <h3>promote</h3>,
+        element: <Promote />,
       },
       {
         path: routers.adminPanel.help,
-        element: <h3>help</h3>,
+        element: <Help />,
       },
     ],
   },

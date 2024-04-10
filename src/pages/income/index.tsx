@@ -1,3 +1,3 @@
-export const Income = ({}) => {
+export const Income = () => {
   return <>Income</>;
 };

@@ -1,3 +1,3 @@
-export const Help = ({}) => {
+export const Help = () => {
   return <>Help</>;
 };
