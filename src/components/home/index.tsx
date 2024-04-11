@@ -1,9 +1,9 @@
 import { FormLogin } from '../../components';
 
-export const Home = () => {
+export const HomeSingIn = () => {
   return (
-    <section className='login'>
-      <div className='container '>
+    <section className='section-sing-in'>
+      <div className='container'>
         <FormLogin />
       </div>
     </section>

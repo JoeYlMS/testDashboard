@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom';
+import { Navigation } from '../../components';
 
 export const Layout = () => {
   return (
-    <>
-      <header>Header</header>
+    <section className='dashboard-content'>
+      <Navigation />
       <Outlet />
-      <footer>Footer</footer>
-    </>
+    </section>
   );
 };

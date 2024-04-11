@@ -1,7 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Layout } from '../pages';
+import { Layout, Home, Customers, Product, Income, Promote, Help } from '../pages';
 import { routers } from '../constants/routers';
-import { Home } from '../components';
 
 export const router = createBrowserRouter([
   { path: routers.home, element: <Home /> },
@@ -11,27 +10,27 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <h3>Dashboard</h3>,
+        element: <h2>Dashboard</h2>,
       },
       {
         path: routers.adminPanel.product,
-        element: <h3>product</h3>,
+        element: <Product />,
       },
       {
         path: routers.adminPanel.customers,
-        element: <h3>customers</h3>,
+        element: <Customers />,
       },
       {
         path: routers.adminPanel.income,
-        element: <h3>income</h3>,
+        element: <Income />,
       },
       {
         path: routers.adminPanel.promote,
-        element: <h3>promote</h3>,
+        element: <Promote />,
       },
       {
         path: routers.adminPanel.help,
-        element: <h3>help</h3>,
+        element: <Help />,
       },
     ],
   },
