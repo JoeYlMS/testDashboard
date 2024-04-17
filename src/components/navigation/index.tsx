@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { NavList } from './nav-list';
@@ -9,29 +8,20 @@ import './style.scss';
 import { routers } from '../../constants/routers';
 import { mocksNavigation } from '../../mocks';
 import UserIcon from '../../assets/img/user-icon.png';
-import { BurgerIcon } from './burger-icon';
 
 export const Navigation = () => {
-  //   const [isActiveList, setIsActiveList] = useState(-1);
   return (
-    <section className='nav-box'>
+    <div className='nav-box'>
       <Link to={routers.admin} className='logo-box d-flex'>
         <IconLogo className='logo' />
         <h2>Dashboard</h2>
         <span>v.01</span>
       </Link>
       <nav className='nav-lists'>
-        <BurgerIcon />
+        {/* <BurgerIcon /> */}
         <ul className='nav-lists-box'>
           {mocksNavigation.map((list, index) => {
-            return (
-              <NavList
-                {...list}
-                Svg={list.icon}
-                key={list.id + index}
-                // setIsActiveList={setIsActiveList}
-              />
-            );
+            return <NavList {...list} Svg={list.icon} key={list.id + index} />;
           })}
         </ul>
       </nav>
@@ -42,6 +32,6 @@ export const Navigation = () => {
           <p className='user-position'>Project Manager</p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };

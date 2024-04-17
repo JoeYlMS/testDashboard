@@ -1,5 +1,5 @@
-import { BlokContain } from '../../components';
+import { BlokContent } from '../../components';
 
 export const Customers = () => {
-  return <BlokContain />;
+  return <BlokContent />;
 };

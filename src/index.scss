@@ -9,6 +9,13 @@
   font-family: inherit;
 }
 
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
